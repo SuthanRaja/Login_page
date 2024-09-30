@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+   
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1C1890',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="w-full h-full flex items-center justify-center">
+
+        <div class="w-1/2 lg:block hidden">
+
+            <img src="./assets/image.png" class=" h-screen w-screen">
+
+        </div>
+
+        <div class=" lg:w-1/2 h-screen flex justify-center items-center">
+
+            <div class="my-16 border w-1/2 ">
+
+                <img src="./assets/logo.png" class="w-full ">
+
+                <form class="form" id="form">
+
+                    <div class="my-8">
+
+                        <label class="text-primary font-semibold text-3xl">Login</label>
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="email">Email</label>
+
+                        <input type="email" id="email"class="my-2 p-2 border-3 rounded-md w-full outline-none focus:outline focus:outline-primary flex flex-col" placeholder="m@example.com" autocomplete="off" >
+                        <small id="emailError" class="text-red-600"></small>
+                    </div>
+
+                    <div class="form-field my-8">
+
+                        <label for="password">Password</label>
+
+                        <input type="password" id="password" class="my-2 p-2 border-3 rounded-md w-full outline-none focus:outline focus:outline-primary flex flex-col" placeholder="********" autocomplete="off" >
+                        <small id="passwordError" class="text-red-600"></small>
+                    </div>
+
+                    <div class="form-field">
+
+                        <button type="submit" id="btn" class="my-2 p-2 bg-primary w-full text-white rounded-md hover:opacity-90">Login</button>
+
+                    </div>
+
+                    <div id="displayInfo"></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
